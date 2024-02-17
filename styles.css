@@ -802,7 +802,7 @@ section row {
 
 
 .section-header {
-  background-image: url("assets/img/KK_crop.webp");
+  background-image: url("assets/img/test.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -814,6 +814,12 @@ section row {
 @media (max-width: 991.98px) {
   .section-header__logo {
     max-width: 50%;
+  }
+}
+
+@media (max-width: 661.98px) {
+ .section-header {
+  background-size: cover;
   }
 }
 .section-header__header--main {
