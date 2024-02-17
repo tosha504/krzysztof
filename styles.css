@@ -895,6 +895,7 @@ section row {
 @media (max-width: 991.98px) {
   .section-header__name {
     font-size: calc(48px + 16 * (100vh - 991px) / 671);
+    padding: 0.5rem 2rem;
   }
 }
 .section-header__surname {
@@ -910,6 +911,8 @@ section row {
   .section-header__surname {
     font-size: calc(54px + 16 * (100vh - 991px) / 671);
     clear: both;
+    padding: 0.5rem 2rem;
+
   }
 }
 .section-header__scroll {
