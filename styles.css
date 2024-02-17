@@ -91,7 +91,7 @@ button {
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 16px;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
@@ -819,6 +819,7 @@ section row {
 
 @media (max-width: 661.98px) {
  .section-header {
+  background-position: center bottom;
   background-size: cover;
   }
 }
@@ -907,7 +908,7 @@ section row {
 }
 @media (max-width: 991.98px) {
   .section-header__surname {
-    font-size: calc(64px + 16 * (100vh - 991px) / 671);
+    font-size: calc(54px + 16 * (100vh - 991px) / 671);
     clear: both;
   }
 }
@@ -1251,7 +1252,7 @@ footer .footer__logo {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-   gap: 30px;
+  gap: 30px;
 }
 
 .why__list__list-item {
@@ -1272,7 +1273,8 @@ footer .footer__logo {
 
 .why__list__list-item span {
   display: block;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 25px;
 }
 
 .why__list__list-item::before{
@@ -1290,7 +1292,7 @@ footer .footer__logo {
   text-align: center;
   padding: 1rem;
   background:#0F3F93;
-  font-weight: 600;
+  font-weight: 900;
   color: #fff;
   font-size: calc(2rem + 0.6vw);
   position: relative;
