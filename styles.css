@@ -885,12 +885,12 @@ section row {
   align-items: baseline;
 }
 .section-header__name {
-  font-size: calc(50px + 36 * (100vw - 576px) / 608);
+  font-size: calc(30px + 36 * (100vw - 576px) / 608);
   line-height: 1em;
   background-color: #0F3F93;
   color: #fff;
   font-weight: 900;
-  padding: 0.75rem 2rem;
+  padding: 1.5rem 2rem;
 }
 @media (max-width: 991.98px) {
   .section-header__name {
@@ -898,13 +898,13 @@ section row {
   }
 }
 .section-header__surname {
-  font-size: calc(4rem + 48 * (100vw - 576px) / 608);
+  font-size: calc(3rem + 48 * (100vw - 576px) / 608);
   line-height: 1em;
   background-color: #0F3F93;
   color: #fff;
   font-weight: 900;
   max-width: 100%;
-  padding: 0.75rem 2rem;
+  padding: 1.5rem 2rem;
 }
 @media (max-width: 991.98px) {
   .section-header__surname {
