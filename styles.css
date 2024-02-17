@@ -800,7 +800,7 @@ section row {
 
 
 .section-header {
-  background-image: url("../assets/img/zdjecie_kandydata.jpg");
+  background-image: url("assets/img/zdjecie_kandydata.jpg");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -956,7 +956,7 @@ section row {
 
 .section-contact {
   background-color: #103F93;
-  background-image: url("../assets/img/tlo_serduszko.png");
+  background-image: url("assets/img/tlo_serduszko.png");
   background-size: cover;
   background-position: top 40% center;
   padding: 2rem;
@@ -1061,7 +1061,7 @@ section row {
 .section-plans__list li {
   font-weight: 300;
   margin-bottom: 0.5rem;
-  background: url("../assets/img/checkbox-bigger.svg") no-repeat left center;
+  background: url("assets/img/checkbox-bigger.svg") no-repeat left center;
   padding-left: 3rem;
   min-height: 42px;
   list-style: none;
@@ -1277,7 +1277,7 @@ footer .footer__logo {
   height: 50px;
  font-weight: 300;
   margin-bottom: 0.5rem;
-  background: url("../assets/img/checkbox-bigger.svg") no-repeat left center;
+  background: url("assets/img/checkbox-bigger.svg") no-repeat left center;
   padding-left: 3rem;
   list-style: none;
 }
