@@ -30,10 +30,10 @@
                 <div class="row">
                     <div class="col-md-12 mb-3" data-aos="fade-right">
                         <div
-                            class="section-header__slogan d-flex align-items-end">
+                            class="section-header__slogan d-flex align-items-end flex-wrap">
                             <div
                                 class="d-flex align-items-center justify-content-center">5</div>
-                            DO RADY MIASTA POZNANIA
+                           <span>DO RADY MIASTA POZNANIA</span>
                         </div>
                         <div class="mt-4 section-header__name-container">
                             <p class="section-header__name m-0">Krzysztof</p>
@@ -343,14 +343,15 @@
                     kontaktowy</h3>
                 <p class="font-18">Widzisz jakiś problem do rozwiązania, masz dobry pomysł na poprawę komfortu życia mieszkańców?</p>
 
-                <form action="form_handler.php"  method="POST">
-                    <input type="text" name="name" placeholder="Imię i nazwisko *">
-                    <input type="email" name="email" placeholder="Twój email">
+                <form action="form_handler.php"  id="contactForm"  method="POST">
+                    <input type="text" name="name" placeholder="Imię i nazwisko *" required>
+                    <input type="email" name="email" placeholder="Twój email*" required>
                     <input type="text" name="phone" placeholder="Twój numer telefonu (opcjonalnie)">
-                    <textarea name="tresc" id="" cols="20" rows="10"  placeholder="Treść wiadomości"></textarea>
-                    <p><input type="checkbox" name="consent"> wyrażam zgodę na przetwarzanie moich danych osobowych w celu nawiązanie koryspondencji i kontaktu</p>
+                    <textarea name="tresc" id="" cols="20" rows="10"  placeholder="Treść wiadomości*" required></textarea>
+                    <p><input type="checkbox" name="consent" aria-label="Consent" required> wyrażam zgodę na przetwarzanie moich danych osobowych w celu nawiązanie koryspondencji i kontaktu*</p>
                     <input type="submit" value="Wyślij wiadomość">
                 </form>
+                <div id="response"></div>
             </div>
         </div>
 
@@ -362,6 +363,30 @@
             </div>
         </footer>
         <script>
+             document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var form = event.target;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Success, clear form and show thank you message
+                        form.reset();
+                        document.getElementById("response").innerHTML = "<p>Dziękujemy za przesłanie formularza!</p>";
+                    } else {
+                        // Error, display error message
+                        document.getElementById("response").innerHTML = "<p>Błąd: Nie można wysłać formularza.</p>";
+                    }
+                }
+            };
+
+            xhr.open(form.method, form.action, true);
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            xhr.send(formData);
+        });
             function myFunction() {
                 const element = document.getElementById("section-contact");
                 element.scrollIntoView();
